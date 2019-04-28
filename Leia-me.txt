@@ -1,0 +1,45 @@
+			
+									INSTRUÇÕES DE USO
+
+1) Os arquivos de texto devem estar na mesma pasta do projeto.
+
+2) Para compilar o projeto tanto sistema operacional Windows quanto no Linux via promt de comando, 
+digite esse comando a baixo:
+
+ gcc -o executavel main.c patricia.c patricia.h tad_documento.c tad_documento.h tad_lista.c tad_lista.h tst.h tst.c
+
+3) Especificações de uso do projeto:
+
+	-> 0)Sair da execução do projeto.
+	-> 1)Inserir um texto na Biblioteca = Lê um arquivo determinado pelo usuário e faz a inserção das palavras contidas no texto na Biblioteca.
+	-> 2)Imprimir todas as palavras da Biblioteca = Mostra todas as palavras contidas na Biblioteca até o momento atual.
+	-> 3)Procurar por uma palavra na Biblioteca = Procura o termo fornecido pelo usuário em toda a Biblioteca. Se encontrado, o termo é mostrado na tela.						      
+	-> 4)Bucar pela relevância de n termos na Biblioteca = Faz o cálculo da relevancia entre n termo(s).
+	-> 5)Auto Complete = Mostra todas as palavras possíveis que têm prefixo igual ao termo de entrada. 
+	
+4) Informações adicionais:
+	-> Teste de relevância da palavra "tries" : w(tries,3) = 4 x log2(4)/2 = 4;
+						    w(tries,4) = 2 x log2(4)/2 = 2;				
+						    r(3) = 1/224 x w(tries,3) = 0,2;
+						    r(4) = 1/352 x w(tries,4) = 0,01; 
+
+							
+						=>   Conclusão: O termo "tries" é mais relevante no Texto 3;
+
+	-> Teste de relevância da palavra "find" e "search" : w(find,3) = 5 x log2(4)/2 = 5;
+						   	      w(find,4) = 1 x log2(4)/2 = 1;
+							      w(search,3) = 2 x log (4)/2 = 2;
+							      w(search,4) = 7 x log(4)/2 = 7
+						  	      r(3) = 1/224 x [w(find,3) + w(search,3)] = 0,03; 
+							      r(4) = 1/394 x [w(find,4) + w(search,4)] = 0,02;
+						=>   Conclusão: Os termos "find" e "search" são mais relevantes no Texto 3.
+
+
+
+
+Projeto feito por:					
+- Pablo Miranda Batista			3482
+- Lucas Ranieri Oliveira Martins	3479
+- João Victor Magalhães Souza		3483
+
+															
